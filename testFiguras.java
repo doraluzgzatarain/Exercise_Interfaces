@@ -1,20 +1,26 @@
 public class testFiguras {
 	public static void main(String[] args) {
-		Triangulo t1 = new  Triangulo("Triángulo t1", 20.0, 10.0, 15.0);
-		Triangulo t2 = new  Triangulo("Bermudas", 87.0, 121.0, 101.0);
-		// TODO: Aquí se deben instanciar las otras figuras geométricas
-
-		imprimirCalculo(t1); imprimirCalculo(t2);
+		Triangulo triangulo1 = new  Triangulo("Triángulo 1", 20.0, 10.0, 15.0, 15.0, 15.0);
+		Cuadrado cuadrado1 = new Cuadrado ("Cuadrado 1", 30.5);
+		Rectangulo rectangulo1 = new Rectangulo ("Rectángulo 1", 20.5, 12.5);
+		Rombo rombo1 = new Rombo ("Rombo 1", 40.5, 30.3, 28.9);
+		Romboide romboide1 = new Romboide ("Romboide 1", 5.3, 6.7);
+		Trapecio trapecio1 = new Trapecio ("Trapecio 1", 54.5, 38.9, 60.7, 38.9, 60.7, 54.5, 40.5);
 		
-		// TODO: Aquí se debe probar cada figura con el método imprimirCalculo
+		imprimirCalculo(triangulo1); 
+		imprimirCalculo(cuadrado1);
+		imprimirCalculo(rectangulo1);
+		imprimirCalculo(rombo1);
+		imprimirCalculo(romboide1);
+		imprimirCalculo(trapecio1);
 		
 	}//main
 
-	public static void imprimirCalculo(Triangulo t) {
-		System.out.println(t);
-		System.out.println("+========================================");
-		System.out.println("|El área de ["+t.getName()+"] es: " + t.calcularArea() + 
-				"\n" + "|El perímetro de ["+t.getName()+"] es: " + t.calcularPerimetro());
-		System.out.println("+========================================");
+	public static void imprimirCalculo(FigurasGeometricas f) {
+		System.out.println(f);
+		System.out.println("+======================================================================================================================");
+		System.out.println("|El área de ["+f.getName()+"] es: " + String.format("%.2f", f.calcularArea()) + 
+				"\n" + "|El perímetro de ["+f.getName()+"] es: " + String.format("%.2f",f.calcularPerimetro()));
+		System.out.println("+======================================================================================================================");
 	}//imprimirCalculo
 }//class testFiguras
